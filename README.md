@@ -1,2 +1,4 @@
-# Tomath
-A javascript math game.
+Tomath
+====
+
+A simple little math game by sushant.

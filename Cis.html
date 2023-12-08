@@ -1,0 +1,202 @@
+<!-- The above code is an HTML document that creates a simple math game called "Tomath". It includes
+various screens such as the opening screen, login screen, main menu screen, tutorial screen, about
+screen, signed out screen, and main game screen. It also includes CSS stylesheets and external
+scripts for functionality. The code sets up the structure and layout of the game, including the
+title, icons, login form, game instructions, and game elements. -->
+<!doctype html>
+<html>
+  <head>
+    <!-- Title Name -->
+    <title>Tomath</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple math game." />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Icon Image -->
+    <link rel="icon" type="image/png" href="img/tomato.png" />
+    <link rel="shortcut icon" href="img/tomato.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/tomato.png"/>
+    
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    
+    <!-- CSS Stylesheets -->
+    <style>html,body{background:#222;}</style>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/fonts.css" type="text/css" rel="stylesheet" />
+  </head>
+  <!-- Body color black -->
+  <body bgcolor="#222222">
+  
+    <!-- Opening screen --> 
+    <div id="container">
+        <div id="title" class="screen show01 hide0 hide1 hidehs" data-action="close-titleScreen">
+            <div class="vertical">
+                <h1>T0math</h1>
+                <div id="titlegrid" class="board">
+                    <div id="digits">                    
+                        <span id="zero">T0</span><span id="hs"> ma </span><span id="one">th</span>
+                    </div>
+                <table data-grid="titlegrid" cellpadding="0" cellspacing="0"><tbody><tr><td><div class="tile tile-2"><div class="inner"></div></div></td><td><div class="tile tile-1"><div class="inner"></div></td></tr></tbody></table>
+                </div>
+                <p>
+                        A simple game<br>from sushant
+                </p>
+                <p><i>Click Here !</i></p>
+                <img id="trophy" src="img/tomato.png">
+            </div>
+        </div>
+   
+    <!-- Login screen -->
+    <div id="menu" class="screen wrapper">
+        
+        <div class="search-block">
+            <c>
+                <h4> Enter Your Credentials </h4>
+            </c>
+            <form class="search-form">
+                <b>
+                    <label for="userid">Email ID: </label>
+                
+                    <input type="text" id="userid" placeholder= "Enter your Email ID" name="userid" required> 
+                </b>
+                <br>
+                <b><label for="userpass">Password: </label></b>
+                <input type="password" id="userpass" placeholder="Enter your Password" name="userpass" required>         
+            </form>
+            <br>
+            <br>
+            <button type="submit" class="Signin" id="Signin">Sign In</button>
+            <br>
+            <f>Don't have an account? <a href="Registration.html">Register here.</a></f>
+            <br>
+            <d><label>------------------  OR  ------------------</label></d>
+            <br>
+            <button class="btn" id="googleSignInBtn"><img src="img\Capture.PNG" alt="Submit Button"/></button>
+            <br>
+            <br>
+            <button class="btn1" id="microsoftSignInBtn" type="submit"><img src="img\microsoft login.PNG" alt="Submit Button" /></button>
+     </div>
+    </div>
+
+    <!-- Main menu screen -->
+    <div id="menu1" style="display: none;">
+        <div class="vertical">
+            <h2>T0math</h2>
+            <p data-action="tutorial">
+            How to play
+            </p>
+            <p data-action="play">
+            Play
+            </p>
+            <p data-action="about">
+                About
+            </p>
+            <p id="Signout" data-action="out">
+                Log Out
+            </p>
+        </div>
+    </div>
+
+    <!-- Tutorial screen -->
+    <div id="tutorial" class="search-block-1 screen" data-action="show-menu1">
+        <form class="search-form-1">
+            <div>
+                <img class="img" src="img/Tutorial.JPG" alt="tutorial" />
+                <p>This is the tutorial explaining how to play Tomath.<p>
+                <p>Just enter the value you think it is hidden by the tomato picture. The digit should solve the equation. </p>
+                <p>After entering the digit, click the "Check" buttton to see if you were correct or not.</p>
+                <p>After which you will see whether you win or not. Click the Next Question button to load the next problem</p>    
+                <p>You can click the arrow button to go back to the menu page.</p>
+            </div>
+        </form>    
+    </div>
+
+    <!-- About screen -->
+    <div id="about" class="search-block-1 text screen " data-action="show-menu1">
+        <div class="vertical">
+        <h3>About</h3>
+        <p>
+        T0math is a math game.<br>
+        <br>
+        It was created by<br>
+        Sushant Rajkarnikar.<br>
+        <br>
+        This is a simple number guessing game<br>
+        <br>
+        (c) 2023<br>
+        www.sushant2053@gmail.com
+        </p>
+        </div>
+    </div>
+
+    <!-- Signed out screen -->
+    <div id="out" class="search-block-1 text screen " style="display: none;">
+        <div class="vertical">
+        <h1>T0math</h1>
+        <img id="trophy" src="img/tomato.png">    
+        <h5>You are signed out!</h5>
+        <f><a href="Cis.html">Want to Sign-In Again?</a></f>
+        </div>
+    </div>
+   
+    <!-- Main game screen -->
+    <div id="play" class="search-block-1 screen" >
+        <form class="search-form-1">
+            <div>
+                <img src="img/back.png" alt="Back" class="backbtn" data-action="show-menu1">
+                <img src="img/trophy.png" class="trophy2" alt="Back"><span id="trophy1"> 0</span>
+                <h4>Enter the digit you think the tomato is hiding.</h4>
+            </div>
+            <div>
+            <img id="image" class="img" alt="API Image">
+          </div>
+          <input type="text" id="userid-1" placeholder= "Enter the number that you think it is." name="userid-1" required> 
+          <button type="button" id="Signin-2" class="Signin-1">Check</button>
+          <button type="button" class="Signin-1" onclick="nextq()">Next Question</button>
+          <div id="timer" class="timer"></div>
+
+          <div id="answerElement"></div>
+          <p id="result" class="result"></p>
+          <p id="usrinput"></p>
+          <input type="hidden" id="solution">
+        </form>
+      </div>
+    </div>
+</div>
+<div id="feelsize"></div>
+</body>
+
+<!-- Scripts -->
+
+<!-- External Fonts Script -->
+<script>
+    var WebFontConfig = {
+        custom: {
+            families: ['molle','Josefin Sans'],
+            urls: ['css/fonts.css']
+        },
+        active: function() {
+            //Game.start();
+            app.fontsLoaded();
+        }
+    };  
+</script> 
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="module" src="js/firebase.js"></script>    
+    <script>
+        var scripts = [
+            'js/jquery-2.1.0.min.js',
+            'js/utils.js',
+            'js/game.js',
+            'js/webfont.js'
+        ]
+        for (var i=0; i<scripts.length; i++) {
+            document.write('<scr'+'ipt src="' + scripts[i] + (Config.barph? ('?barph=' + (new Date() * 1)) : '') + '"></scr'+'ipt>');
+        }
+    </script>
+</html>
