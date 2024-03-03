@@ -1,0 +1,111 @@
+<!-- The given code is an HTML document that creates a registration form for a math game called "Tomath". -->
+<!doctype html>
+<html>
+  <head>
+    <title>Tomath</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple math game." />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="img/tomato.png" />
+    <link rel="shortcut icon" href="img/tomato.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/tomato.png"/>
+    
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    
+    <!-- Stylesheet -->
+    <style>html,body{background:#222;}</style>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/fonts.css" type="text/css" rel="stylesheet" />
+    
+    
+</head>
+    <!-- Body background color black -->
+    <body bgcolor="#222222">
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
+    
+        // Firebase SDK for Google Analytics
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js'
+    
+        // Firebase products 
+        import { getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
+        const firebaseConfig = {
+            apiKey: "AIzaSyCVxEskCjFVcwLq4QFptZKxuRTEsJEtlSU",
+            authDomain: "tomath-404215.firebaseapp.com",
+            databaseURL: "https://tomath-404215-default-rtdb.firebaseio.com",
+            projectId: "tomath-404215",
+            storageBucket: "tomath-404215.appspot.com",
+            messagingSenderId: "651645390180",
+            appId: "1:651645390180:web:e616af808822e72a4b7e71",
+            measurementId: "G-WMXP56QQ4V"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        // Initialize Firebase Realtime Database
+        const db = getFirestore();
+        
+        // Click event
+        document.getElementById('Signup').addEventListener('click', registerUser);
+        function registerUser() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            console.log(email, password)
+            
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((result) => {
+                    // Go to login page
+                    window.location.href = 'Cis.html';                    
+                    
+                })
+                .catch((error) => {
+                    // Error handling
+                    console.log(error.code);
+                    console.log(error.message);
+                    
+                });
+        }
+
+function saveUserData(userId, userData) {
+// Save user data to the "users" node in the database
+db.ref('users/' + userId).set(userData);
+}
+</script>
+        
+    <div class="wrapper1">
+            <div class="search-block">
+                <c>
+                    <h4> Enter Your Information </h4>
+                </c>
+                <form class="search-form">
+                    <b>
+                        <label for="userid">Email ID: </label>
+                    
+                        <input type="text" id="email" placeholder= "Enter your Email ID(Must contain @)" name="email" required> 
+                    </b>
+                    <br>
+                    <b><label for="userpass">Password: </label></b>
+                    <input type="password" id="password" placeholder="Enter your Password(Minimum 6 characters)" name="password" required>         
+                </form>
+                <br>
+                <br>
+                <button type="button" class="Signin" id="Signup">Register</button>
+                <br>
+                <f>Already have an account? <a href="Cis.html">Sign-In here.</a></f>
+                
+            </div>
+        </div>
+
+        
+        
+</body>
+
+</html>

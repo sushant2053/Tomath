@@ -1,0 +1,1122 @@
+/* The above code is a CSS code snippet that sets some common styles for all elements on a webpage. */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    cursor: default;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+
+  /* The above code is defining a CSS rule for an element with the ID "feelsize". This element is being
+  positioned fixed, meaning it will stay in a fixed position on the screen even when the user
+  scrolls. It has a z-index of -1, which means it will be positioned behind other elements on the
+  page. The element is being positioned at the bottom right corner of the screen, with a width and
+  height of 100% to cover the entire viewport. */
+  #feelsize {
+    position: fixed;
+    z-index: -1;
+    right:0; bottom:0;width: 100%; height: 100%;
+  }
+
+  body {
+    background: #222;
+    padding: 0; margin: 0;
+  }
+
+  /* The above code is defining CSS styles for an element with the ID "container". */
+  #container {
+    align-content: center;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0; /* vertical center */
+    left:0;right:0; /* horizontal center */
+    overflow:visible;
+  }
+
+  /* The above code is defining a CSS class called "vertical". This class is used to vertically center
+  an element on the page. It achieves this by using absolute positioning and the transform property
+  to translate the element 50% from the top and left of its parent container. This effectively
+  centers the element vertically and horizontally. */
+  .vertical {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /* The above code is defining a CSS class called "screen". This class is being used to position an
+  element absolutely on the screen, with a width and height of 100%. The element will be positioned
+  at the bottom right corner of the screen. */
+  .screen {
+    position: absolute;
+    width: 100%; height: 100%;
+    right: 0; bottom: 0;
+  }
+
+  /* The above code is defining CSS styles for heading elements (h1, h2, and h3). It sets the text
+  alignment to center, the font family to 'molle', the color to white (#fff), the font weight to
+  normal, and adds a margin of 5% on the top and bottom. It also sets the white-space property to
+  nowrap, which prevents the text from wrapping to the next line. */
+  h1,h2,h3 {
+    text-align: center;
+    font-family: 'molle';
+    color: #fff;
+    font-weight: normal;
+    margin: 5% 0;
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-size: 15vw;
+    margin: 7% 0 0 0;
+  }
+
+  /* The above code is defining a CSS rule for the "h3" element. It sets the font size to be 15% of the
+  viewport width and adds a margin of 5% to the top and 0 to the right, bottom, and left. */
+  h3 {
+    font-size: 15vw;
+    margin: 5% 0 0 0;
+  }
+  
+  h2#boardsize {
+    position: relative;
+    z-index: 10;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 3%;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+  }
+  
+  /* The above code is defining a CSS style for the `<p>` element. It sets the font family to 'Josefin
+  Sans' and the color to white (#fff). It also aligns the text to the center. */
+  p {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+
+  #titlegrid {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #loadinggrid {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  #menu p {
+    margin: 0;
+  }
+
+  /* The above code is defining CSS styles for a menu. */
+  #menu1 p {
+    margin: 0;
+  }
+
+  #menugrid {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #menu1grid {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #menugrid .inner {
+      color: #fff;
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      -webkit-transition: opacity .3s ease-out;
+      -moz-transition: opacity .3s ease-out;
+      -ms-transition: opacity .3s ease-out;
+      transition: opacity .3s ease-out;
+  }
+
+  /* The above code is defining CSS styles for the elements with the class "inner" that are descendants
+  of the element with the ID "menu1grid". */
+  #menu1grid .inner {
+    color: #fff;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
+
+  .board {
+    padding: 10px 10px 20px 10px;
+    background: #222;
+  }
+    .board.hidden {
+      opacity: 0;
+      z-index: -1;
+    }
+    .board table {
+      width: 100%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    .board table td {
+      position: relative;
+      font-size: 0; line-height: 0;
+    }
+  .tile {
+    position: relative;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    padding: 4%;
+  }
+  .tile .inner {
+    position: relative;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -ms-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+  }
+  .tile .inner { 
+    background-color: #222;
+  }
+  
+  .tile-1 .inner:after, .tile-2 .inner:after {
+    content: ''; position: absolute;
+    left: 0; bottom: 0; width: 100%; height: 12%;
+    background: #222;
+  }
+  /* The above code is defining a CSS class called "iconcon". This class is used to style an element as
+  an inline block and apply padding to it. It also includes transition properties to animate the
+  opacity of the element over a duration of 0.3 seconds with an ease-out timing function. The
+  transition delay is set to 0.5 seconds. */
+  .iconcon {
+    display: inline-block;
+    padding: 7% 0;
+    -webkit-transition: opacity .3s ease-out .5s;
+    -moz-transition: opacity .3s ease-out .5s;
+    -ms-transition: opacity .3s ease-out .5s;
+    transition: opacity .3s ease-out .5s;
+  }
+
+  .iconcon.hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+  .iconcon.wiggle {
+    -webkit-animation: iconWiggle 2s ease-in-out .5s;
+    -moz-animation: iconWiggle 2s ease-in-out .5s;
+    -ms-animation: iconWiggle 2s ease-in-out .5s;
+    animation: iconWiggle 2s ease-in-out .5s;
+  }
+  .icon {
+    display: block;
+    width: 22px; height: 22px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  #back.icon { background-image: url(../img/close.png); }
+  #retry.icon { background-image: url(../img/spinner.png); }
+  #undo.icon { background-image: url(../img/history.png); }
+  #help.icon { background-image: url(../img/eye.png); }
+  #next.icon { background-image: url(../img/arrow-right.png); }
+  #tweet.icon { background-image: url(../img/twitter.png); }
+  
+  #bar {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .error {
+    -webkit-animation: wiggle .5s ease;
+    -moz-animation: wiggle .5s ease;
+    -ms-animation: wiggle .5s ease;
+    animation: wiggle .5s ease;
+  }
+  .loading {
+    -webkit-animation: wiggle 2s infinite ease;
+    -moz-animation: wiggle 2s infinite ease;
+    -ms-animation: wiggle 2s infinite ease;
+    animation: wiggle 2s infinite ease;
+  }
+  
+  /* The above code is defining a CSS class called "screen". It sets the opacity of elements with this
+  class to 0, making them completely transparent. It also adds a transition effect to the class,
+  making any changes to the opacity property animate smoothly over a duration of 0.3 seconds. The
+  transition effect is applied to all browsers that support CSS transitions. */
+  .screen {
+    opacity: 0;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+
+  .show {
+    opacity: 1;
+  }
+  .screen.text {
+    padding: 0 10%;
+  }
+  .show01 * {
+    color: transparent;
+  }
+  
+  /* The above code is defining CSS transitions for the color property on all elements within the
+  element with the ID "title". The transitions will take 1 second to complete and will have an
+  ease-out timing function. The transitions will start 1 second after the initial state. */
+  #title * {
+    -webkit-transition: color 1s ease-out 1s;
+    -moz-transition: color 1s ease-out 1s;
+    -ms-transition: color 1s ease-out 1s;
+    transition: color 1s ease-out 1s;
+  }
+
+  /* The above code is targeting specific elements in the HTML document and applying CSS styles to
+  them. */
+  html body .show01 .tile .inner,
+  html body .show01 .tile .inner:after {
+    background: transparent;
+  }
+  .show01 #title p {
+    color: transparent;
+  }
+
+  #title p {
+    -webkit-transition: color 1s ease-out 1s;
+    -moz-transition: color 1s ease-out 1s;
+    -ms-transition: color 1s ease-out 1s;
+    transition: color 1s ease-out 1s;
+  }
+  #titlegrid {
+    position: relative;
+  }
+  
+  /* The above code is defining CSS styles for an element with the ID "digits". It sets the position to
+  absolute, making it positioned relative to its closest positioned ancestor. The width and height
+  are set to 100% to make the element fill the entire width and height of its parent container. The
+  z-index property sets the stacking order of the element, with a value of 10. The color property is
+  set to transparent, making the text inside the element invisible. The text-align property is set
+  to center, aligning the text horizontally in the center of the element. The font-family property
+  is set */
+  #digits {
+    position: absolute;
+    width: 100%; height: 100%;
+    z-index: 10;
+    color: transparent;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /* The above code is defining CSS styles for a digital clock display. It includes styles for
+  different digits (zero and one) and a separator (hs). The styles include positioning, color,
+  padding, and transitions. The code also includes classes for showing and hiding the digits and
+  separator. */
+  #digits #zero { position: absolute; left: 0; top: 0; width: 50%; height: 100%;}
+  #digits #one { position: absolute; padding-left: 18%; right: 0; top: 0; width: 50%; height: 100%;}
+  #digits #hs { 
+    color: #fff; padding-left: 15%; 
+    text-shadow: 0 0 10px transparent;
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -ms-transition: color 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .show01 #digits #zero,
+  .show01 #digits #one { 
+    color: #fff; 
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -ms-transition: color 1s ease-out;
+    transition: color 1s ease-out;
+  }
+  .hide0 #digits #zero { color: transparent; }
+  .hide1 #digits #one { color: transparent; }
+  .hidehs #digits #hs { 
+    color: transparent; 
+    -webkit-transition: color .1s ease-out;
+    -moz-transition: color .1s ease-out;
+    -ms-transition: color .1s ease-out;
+    transition: color .1s ease-out;
+  }
+  
+  
+  .tile.marked .inner { 
+    border: solid #fff 3px; 
+    -webkit-animation: flash 2s ease-in-out infinite;
+    -moz-animation: flash 2s ease-in-out infinite;
+    -ms-animation: flash 2s ease-in-out infinite;
+    animation: flash 2s ease-in-out infinite;
+  }
+  
+  .topMsg {
+    position: absolute;
+    display: table;
+    width: 100%; top: 0;
+    padding: 0 5%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: 0;
+    margin: 0 !important;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+  }
+    .topMsg span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  
+  .showHint #hintMsg {
+    opacity: 1;
+  }
+  .showHint #boardsize {
+    opacity: 0;
+  }
+  
+  #chooseSize {
+    top: 21%;
+  }
+    #chooseSize.show {
+      opacity: 1;
+    }
+  
+  /* The above code is defining the CSS styles for an element with the ID "score". It sets the position
+  to absolute, width to 100%, bottom to 17%, padding to 0 5%, color to white, font family to
+  'Josefin Sans', height to 32px, font size to 32px, line height to 32px, and opacity to 0. It also
+  adds a transition effect for the opacity property. */
+  #score {
+    position: absolute;
+    width: 100%;
+    bottom: 17%;
+    padding: 0 5%;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 32px; font-size: 32px; line-height: 32px;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+  }
+    
+  /* The above code is defining CSS styles for two elements with IDs "trophy" and "scorenr". */
+  #trophy {
+      position: absolute;
+      width: 410px; height: 280px;
+      right: 6px; top: 90px;
+      padding-top: 0;
+    }
+    #scorenr {
+      position: absolute;
+      display: block;
+      vertical-align: top;
+      left: 50%;
+      top: 10%;
+      padding-left: 2%;
+  
+    }
+    
+    #score.show {
+      opacity: 1;
+    }
+  
+  .tile.completed {
+    -webkit-transform-origin: center center;
+    -webkit-animation: completed 2s ease-in;
+    -moz-transform-origin: center center;
+    -moz-animation: completed 2s ease-in;
+    -ms-transform-origin: center center;
+    -ms-animation: completed 2s ease-in;
+    transform-origin: center center;
+    animation: completed 2s ease-in;
+  }
+  
+  /* The above code is defining a CSS animation called "wiggle" using the @-webkit-keyframes rule. This
+  animation will cause an element to rotate back and forth by 3 degrees in a wiggling motion. The
+  animation starts with a rotation of 3 degrees, then alternates between rotating clockwise and
+  counterclockwise every 10% of the animation duration until it reaches 100%, where it returns to
+  its original rotation. */
+  @-webkit-keyframes wiggle {
+      0% {-webkit-transform: rotateZ(3deg);}
+      10% {-webkit-transform: rotateZ(-3deg);}
+      20% {-webkit-transform: rotateZ(3deg);}
+      30% {-webkit-transform: rotateZ(-3deg);}
+      40% {-webkit-transform: rotateZ(3deg);}
+      50% {-webkit-transform: rotateZ(-3deg);}
+      60% {-webkit-transform: rotateZ(3deg);}
+      70% {-webkit-transform: rotateZ(-3deg);}
+      80% {-webkit-transform: rotateZ(3deg);}
+      90% {-webkit-transform: rotateZ(-3deg);}
+      100% {-webkit-transform: none; }
+  }
+  @-moz-keyframes wiggle {
+      0% {-moz-transform: rotateZ(3deg);}
+      10% {-moz-transform: rotateZ(-3deg);}
+      20% {-moz-transform: rotateZ(3deg);}
+      30% {-moz-transform: rotateZ(-3deg);}
+      40% {-moz-transform: rotateZ(3deg);}
+      50% {-moz-transform: rotateZ(-3deg);}
+      60% {-moz-transform: rotateZ(3deg);}
+      70% {-moz-transform: rotateZ(-3deg);}
+      80% {-moz-transform: rotateZ(3deg);}
+      90% {-moz-transform: rotateZ(-3deg);}
+      100% {-moz-transform: none; }
+  }
+  @-ms-keyframes wiggle {
+      0% {-ms-transform: rotateZ(3deg);}
+      10% {-ms-transform: rotateZ(-3deg);}
+      20% {-ms-transform: rotateZ(3deg);}
+      30% {-ms-transform: rotateZ(-3deg);}
+      40% {-ms-transform: rotateZ(3deg);}
+      50% {-ms-transform: rotateZ(-3deg);}
+      60% {-ms-transform: rotateZ(3deg);}
+      70% {-ms-transform: rotateZ(-3deg);}
+      80% {-ms-transform: rotateZ(3deg);}
+      90% {-ms-transform: rotateZ(-3deg);}
+      100% {-ms-transform: none; }
+  }
+  @keyframes wiggle {
+      0% {transform: rotateZ(3deg);}
+      10% {transform: rotateZ(-3deg);}
+      20% {transform: rotateZ(3deg);}
+      30% {transform: rotateZ(-3deg);}
+      40% {transform: rotateZ(3deg);}
+      50% {transform: rotateZ(-3deg);}
+      60% {transform: rotateZ(3deg);}
+      70% {transform: rotateZ(-3deg);}
+      80% {transform: rotateZ(3deg);}
+      90% {transform: rotateZ(-3deg);}
+      100% {transform: none; }
+  }
+  
+  @-webkit-keyframes flash {
+      0% { border-color: rgba(255,255,255,.3) }
+      50% { border-color: #fff; }
+      100% { border-color: rgba(255,255,255,.3) }
+  }
+  @-moz-keyframes flash {
+      0% { border-color: rgba(255,255,255,.3) }
+      50% { border-color: #fff; }
+      100% { border-color: rgba(255,255,255,.3) }
+  }
+  @-ms-keyframes flash {
+      0% { border-color: rgba(255,255,255,.3) }
+      50% { border-color: #fff; }
+      100% { border-color: rgba(255,255,255,.3) }
+  }
+  @keyframes flash {
+      0% { border-color: rgba(255,255,255,.3) }
+      50% { border-color: #fff; }
+      100% { border-color: rgba(255,255,255,.3) }
+  }
+  
+  @-webkit-keyframes iconWiggle {
+      0% { -webkit-transform: translateY(0); }
+      25% { -webkit-transform: translateY(-50%); }
+      50% { -webkit-transform: translateY(0); }
+      75% { -webkit-transform: translateY(-50%); }
+      100% { -webkit-transform: translateY(0); }
+  }
+  @-moz-keyframes iconWiggle {
+      0% { -moz-transform: translateY(0); }
+      25% { -moz-transform: translateY(-50%); }
+      50% { -moz-transform: translateY(0); }
+      75% { -moz-transform: translateY(-50%); }
+      100% { -moz-transform: translateY(0); }
+  }
+  @-ms-keyframes iconWiggle {
+      0% { -ms-transform: translateY(0); }
+      25% { -ms-transform: translateY(-50%); }
+      50% { -ms-transform: translateY(0); }
+      75% { -ms-transform: translateY(-50%); }
+      100% { -ms-transform: translateY(0); }
+  }
+  @keyframes iconWiggle {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-50%); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-50%); }
+      100% { transform: translateY(0); }
+  }
+  
+  /* The above code is defining keyframe animations for the "completed" animation. There are three
+  different versions of the animation defined for different browsers: -webkit-keyframes for
+  WebKit-based browsers (such as Chrome and Safari), -moz-keyframes for Mozilla Firefox, and
+  -ms-keyframes for Microsoft Edge and Internet Explorer. Each animation starts with an opacity of 1
+  and ends with an opacity of 0, while also scaling the element by a factor of 4. */
+  @-webkit-keyframes completed {
+      from { opacity: 1;}
+      to { opacity: 0; -webkit-transform: scale(4) }
+  }
+  @-moz-keyframes completed {
+      from { opacity: 1;}
+      to { opacity: 0; -moz-transform: scale(4) }
+  }
+  @-ms-keyframes completed {
+      from { opacity: 1;}
+      to { opacity: 0; -ms-transform: scale(4) }
+  }
+  @keyframes completed {
+      from { opacity: 1;}
+      to { opacity: 0; transform: scale(4) }
+  }
+  
+/* The above code is defining a CSS class called "container1". This class is being used to style a
+container element. */
+.container1 {
+  background-color: #ffffff;
+  width: 750px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 5em 3em;
+  border-radius: 0.5em;
+}
+
+.container1 h3 {
+  font-size: 1.2em;
+  color: #23234c;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.8em;
+}
+
+/* The above code is defining the CSS styles for a submit button with the id "submit-btn" that is
+contained within an element with the class "container1". The styles include setting the font size to
+1.2em, font weight to 500, displaying the button as a block element, centering it horizontally with
+margin: 0 auto, setting the background color to #f4c531, border radius to 0.3em, removing the border
+and outline, setting the cursor to a pointer, setting the text color to #23234c, and adding padding
+of 0 */
+.container1 #submit-btn {
+  font-size: 1.2em;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+  background-color: #f4c531;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #23234c;
+  padding: 0.6em 2em;
+}
+
+#error-msg {
+  text-align: center;
+  margin-top: 1em;
+  background-color: #ffdde0;
+  color: #d62f2f;
+  padding: 0.2em 0;
+}
+
+/* The above CSS code is targeting an element with the ID "question" that is inside an element with the
+class "container1". It is setting the background color to #eeedf1, font size to 2em, font weight to
+600, text color to #23234c, and text alignment to center. The element is displayed as a flex
+container with its content centered both vertically and horizontally. It also has some margin and
+padding applied to it. */
+.container1 #question {
+  background-color: #eeedf1;
+  font-size: 2em;
+  font-weight: 600;
+  color: #23234c;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4em 0 1em 0;
+  padding: 1em 0;
+}
+
+/* The above code is defining CSS styles for input elements inside a container with the class
+"container1". The styles include setting the font size to 1em, font weight to 600, width to 2.35em,
+color to #23234c, text alignment to center, padding of 0 on the top and bottom and 0.2em on the left
+and right, no border, transparent background color, a bottom border of 0.12em solid #23234c, and a
+margin of 0 on the top and bottom and 0.25em on the */
+.container1 input {
+  font-size: 1em;
+  font-weight: 600;
+  width: 2.35em;
+  color: #23234c;
+  text-align: center;
+  padding: 0 0.2em;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.12em solid #23234c;
+  margin: 0 0.25em;
+}
+
+.container1 input:focus {
+  border-color: #f4c531;
+  outline: none;
+}
+
+/*Hide Number Arrows*/
+.container1 input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* The above code is targeting the input elements of type "number" within the container1 class in CSS.
+It is removing the default appearance of the spin buttons (up and down arrows) that are typically
+displayed next to number inputs in web browsers. */
+.container1 input[type="number"]::-webkit-outer-spin-button,
+.container1 input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.controls-container1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f4c531;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+/* The above code is defining the CSS styles for an element with the ID "start-btn". It sets the font
+size to 1.2em, font weight to 500, background color to white (#ffffff), text color to a dark blue
+(#23234c), removes the border and outline, sets the cursor to a pointer, adds padding of 0.8em on
+the top and bottom and 1.8em on the left and right, and adds a border radius of 0.3em. */
+#start-btn {
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #23234c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.8em 1.8em;
+  border-radius: 0.3em;
+}
+
+/* The above code is defining CSS styles for an element with the ID "result". It sets the margin-bottom
+to 1em, font-size to 1.5em, and color to #23234c. */
+#result {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  color: #23234c;
+}
+#result span {
+  font-weight: 600;
+}
+
+/* The above code is defining a CSS class called "hide" that sets the display property to "none". This
+class can be applied to HTML elements to hide them from view on the webpage. */
+.hide {
+  display: none;
+}
+
+/* The above code is defining a CSS class called ".btn". This class is being used to style a button
+element. */
+.btn {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  font-family:cursive;
+  text-decoration: none;
+  padding: 9px 8px 8px 1px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 50px;
+  transition: all;
+  text-align: center;
+  image-rendering:auto;
+  width: 185px;
+  margin-top: 20px;
+  margin-left: 110px;
+}
+
+.btn1 {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  font-family:cursive;
+  text-decoration: none;
+  padding: 8px 8px 5px 2px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 50px;
+  transition:all;
+  text-align: center;
+  image-rendering:auto;
+  width: 185px;
+  margin-left: 110px;
+}
+
+/* The above code is defining a CSS class called "Signin". This class is being used to style a button
+or element that is used for signing in. */
+.Signin {
+  color: #ffffff;
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
+  font-family:sans-serif;
+  text-decoration: solid;
+  padding: 12px 8px 12px 2px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  transition:all;
+  text-align: center;
+  width: 150px;
+  align-content: center;
+  margin-bottom: 25px;
+  margin-left: 130px;
+}
+
+/* The above code is a CSS code snippet that is used to center an element on the page. It applies a
+combination of absolute positioning and transform properties to achieve this. The element with the
+class "wrapper" is positioned absolutely with a top and left value of 50%, which places it in the
+center of its containing element. The transform property is then used to translate the element by
+-50% of its own width and height, effectively centering it on the page. The -webkit-, -moz-, and
+-ms- prefixes are used for browser compatibility. */
+.wrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.wrapper1 {
+  position:fixed;
+  top: 15%; left: 84%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* The above code is defining a CSS class called "search-block". It sets the position of the element to
+absolute, adds padding of 1 pixel, aligns the items in the element's container to the center, and
+sets the height to auto. */
+.search-block {
+  position: absolute;
+  padding: 1px;
+  align-items: center;
+  height: auto;
+  
+}
+
+/* The above code is targeting the element with the ID "search-form" that is a descendant of an element
+with the class "search-block" in CSS. It is setting the position of the element to absolute, making
+it positioned relative to its closest positioned ancestor. It is also setting the width of the
+element to 100% of its parent element's width, with a maximum width of 800 pixels. */
+.search-block #search-form {
+ position: absolute;
+ width: 100%;
+ max-width: 800px;
+
+}
+
+/* The above code is defining a CSS style for an element with the ID "userid" that is inside an element
+with the class "search-block". The style includes setting the width to 304px, adding padding of
+20px, applying a border-radius of 50px, setting a border of 2px solid red, setting the background
+color to white, aligning the text to the center, adding a text shadow, and setting margins of 20px
+bottom and 5px left. */
+.search-block #userid {
+  width: 304px;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+/* The above code is defining a CSS style for an element with the ID "userpass" that is inside an
+element with the class "search-block". The style sets the width to 304 pixels, adds padding of 20
+pixels, sets a border radius of 50 pixels, adds a 2 pixel solid red border, sets the background
+color to white, centers the text, and adds a bottom margin of 10 pixels and a left margin of 4
+pixels. */
+.search-block #userpass {
+  width: 304px;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+/* The above code is defining CSS styles for an element with the ID "email" that is a child of an
+element with the class "search-block". */
+.search-block #email{
+  width: 308px;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+/* The above code is defining CSS styles for an element with the ID "password" that is a child of an
+element with the class "search-block". */
+.search-block #password {
+  width: 308px;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+e {
+  color: rgb(0, 0, 0);
+  text-decoration:solid;
+  font-family:cursive;
+  font-style:normal;
+  font-size: 22px;
+  justify-content: center;
+}
+
+/* The above code is defining a CSS style for the "b" element. It sets the color of the text to white
+(rgb(255, 255, 255)), adds a solid underline to the text, sets the font family to cursive, sets the
+font style to italic, sets the font size to 18 pixels, aligns the text to the left, and sets the
+font weight to lighter. */
+b {
+  color:rgb(255, 255, 255);
+  text-decoration:solid;
+  font-family:cursive;
+  font-style:italic;
+  font-size: 18px;
+  justify-content:left;
+  font-weight: lighter
+}
+
+c {
+  color: #fff;
+  text-decoration:solid;
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'molle';
+  margin: 5% 0;
+  white-space: nowrap;
+}
+
+/* The above code is defining CSS styles for the "h4" and "d" elements. */
+
+h4 {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+d {
+  color:#ff4500;
+  text-decoration:solid;
+  font-family:cursive;
+  font-style:italic;
+  font-size: 18px;
+  justify-content:center;
+  font-weight: lighter;
+  margin-left: 50px;
+}
+
+a {
+  color:#ff0000;
+  cursor: pointer;
+}
+
+/* The above code is defining a CSS rule for the hover state of an element with the class "Signin" that
+is a descendant of an element with the class "search-block". When the element is hovered over, it
+will change the text color to red (rgb(255, 0, 0)), the background color to white (rgb(255, 255,
+255)), and add a red border with a thickness of 2 pixels. */
+.search-block .Signin:hover {
+  color: rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.search-block .btn:hover {
+  color: rgb(255, 238, 0);
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 115, 0);
+}
+
+/* The above code is defining a CSS rule for the hover state of a button with the class "btn1" inside
+an element with the class "search-block". When the button is hovered over, it will change the text
+color to rgb(255, 238, 0), the background color to rgb(255, 255, 255), and add a 2px solid border
+with the color rgb(255, 115, 0). */
+.search-block .btn1:hover {
+  color: rgb(255, 238, 0);
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 115, 0);
+}
+
+/* The above code is defining a CSS style for the "f" selector. It sets the color of the text to white
+(rgb(255, 255, 255)), adds a solid underline to the text, centers the text, sets the font family to
+cursive, sets the font style to italic, sets the font size to 18 pixels, sets the font weight to
+lighter, and adds a left margin of 45 pixels. */
+f{
+color:rgb(255, 255, 255);
+text-decoration:solid;
+text-align: center;
+font-family:cursive;
+font-style:italic;
+font-size: 18px;
+font-weight: lighter;
+margin-left: 45px;
+}
+
+/* The above code is defining a CSS class called ".img". This class is being used to style an image
+element. */
+.img {
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 50px;
+  width: 99%;
+  height: 95%;
+  image-rendering: auto;
+}
+
+/* The above code is defining the CSS styles for a search block with the class name "search-block-1". */
+.search-block-1 {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%;
+  height: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+  
+  border-radius: 39px;
+  border: 6px solid #222;
+  background: #222;
+  text-align: center;
+  align-items: center;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  
+}
+
+.search-block-1 #search-form-1 {
+  width: 100%;
+
+  }
+
+.search-block-1 #userid-1 {
+  width: 324px;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(236, 229, 229);
+  text-align: center;
+  text-shadow: 10px;
+  margin-top: 20px;
+}
+
+/* The above code is defining a CSS class called "Signin-1". This class is being used to style a
+sign-in button. */
+.Signin-1 {
+  color: #ffffff;
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
+  font-family:sans-serif;
+  text-decoration: solid;
+  padding: 12px 8px 12px 2px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  transition:all;
+  text-align: center;
+  width: 130px;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-block-1 .Signin-1:hover {
+  color: rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.search-block-1 h4 {
+  text-align: center;
+  font-family:cursive;
+  color: #ffffff;
+  font-size: larger;
+  font-weight: normal;
+  margin: 5% 0;
+  white-space: nowrap;
+}
+
+/* The above code is defining the CSS styles for an h5 element within a class called "search-block-1".
+It sets the text alignment to center, the font family to "molle", the color to white, the font size
+to 70 pixels, the font weight to normal, and adds margins to the left, bottom, and top. It also sets
+the white space property to "pre". */
+.search-block-1 h5 {
+  text-align: center;
+  font-family:'molle';
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: normal;
+  margin-left: -100px;
+  margin-bottom: 10px;
+  margin-top: 210px;
+  white-space:pre;
+}
+
+/* The above code is defining CSS styles for various elements. */
+.backbtn{
+  display: absolute;
+  width: 30px;
+  height: 30px;
+  margin-right: 320px;
+}
+
+.trophy2{
+  display: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+#trophy1{
+  
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.result{
+  font-family: 'molle';
+}
+
+/* The above code is defining a CSS class called "timer". It sets the text alignment to center, the
+font family to cursive, and the color to white. */
+.timer {
+  text-align: center;
+  font-family:cursive;
+  color: #ffffff;
+}
